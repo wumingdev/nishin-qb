@@ -1,0 +1,83 @@
+local Translations = {
+    headers = {
+        ['bsm'] = '老闆選單 - ',
+    },
+    body = {
+        ['manage'] = '管理員工',
+        ['managed'] = '檢查員工列表',
+        ['hire'] = '聘請員工',
+        ['hired'] = '聘請附近的市民',
+        ['storage'] = '存儲訪問',
+        ['storaged'] = '打開存儲',
+        ['outfits'] = '服裝',
+        ['outfitsd'] = '查看已保存的服裝',
+        ['money'] = '資金管理',
+        ['moneyd'] = '查看公司餘額',
+        ['mempl'] = '管理員工 - ',
+        ['mngpl'] = '管理 ',
+        ['grade'] = '等級：',
+        ['fireemp'] = '解雇員工',
+        ['hireemp'] = '聘請員工 - ',
+        ['cid'] = '市民證號：',
+        ['balance'] = '餘額：$',
+        ['deposit'] = '存款',
+        ['depositd'] = '存入資金',
+        ['withdraw'] = '取款',
+        ['withdrawd'] = '從帳戶提款',
+        ['depositm'] = '存款 <br> 可用餘額：$',
+        ['withdrawm'] = '取款 <br> 可用餘額：$',
+        ['submit'] = '確認',
+        ['amount'] = '金額',
+        ['return'] = '返回',
+        ['exit'] = '返回',
+    },
+    drawtext = {
+        ['label'] = '[E] 打開工作管理',
+    },
+    target = {
+        ['label'] = '老闆選單 ',
+    },
+    headersgang = {
+        ['bsm'] = '幫派管理 - ',
+    },
+    bodygang = {
+        ['manage'] = '管理幫派成員',
+        ['managed'] = '招聘或解雇幫派成員',
+        ['hire'] = '招聘成員',
+        ['hired'] = '招聘幫派成員',
+        ['storage'] = '存儲訪問',
+        ['storaged'] = '打開幫派儲物間',
+        ['outfits'] = '服裝',
+        ['outfitsd'] = '更換衣物',
+        ['money'] = '資金管理',
+        ['moneyd'] = '查看幫派餘額',
+        ['mempl'] = '管理幫派成員 - ',
+        ['mngpl'] = '管理 ',
+        ['grade'] = '等級：',
+        ['fireemp'] = '解雇',
+        ['hireemp'] = '招聘幫派成員 - ',
+        ['cid'] = '市民證號：',
+        ['balance'] = '餘額：$',
+        ['deposit'] = '存款',
+        ['depositd'] = '存入資金',
+        ['withdraw'] = '取款',
+        ['withdrawd'] = '從帳戶提款',
+        ['depositm'] = '存款 <br> 可用餘額：$',
+        ['withdrawm'] = '取款 <br> 可用餘額：$',
+        ['submit'] = '確認',
+        ['amount'] = '金額',
+        ['return'] = '返回',
+        ['exit'] = '退出',
+    },
+    drawtextgang = {
+        ['label'] = '[E] 打開幫派管理',
+    },
+    targetgang = {
+        ['label'] = '幫派選單',
+    }
+}
+
+Lang = Lang or Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})

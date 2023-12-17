@@ -1,0 +1,60 @@
+local Translations = {
+    weather = {
+        now_frozen = '天氣已凍結。',
+        now_unfrozen = '天氣不再凍結。',
+        invalid_syntax = '無效的語法，正確語法為：/weather <天氣類型> ',
+        invalid_syntaxc = '無效的語法，使用 /weather <天氣類型> 代替！',
+        updated = '天氣已更新。',
+        invalid = '無效的天氣類型，有效的天氣類型包括：\n晴朗、晴天、中性、煙霧、多霧、多雲、清朗、雨、雷暴、雪、暴風雪、淡雪、聖誕和萬聖節 ',
+        invalidc = '無效的天氣類型，有效的天氣類型包括：\n晴朗、晴天、中性、煙霧、多霧、多雲、清朗、雨、雷暴、雪、暴風雪、淡雪、聖誕和萬聖節 ',
+        willchangeto = '天氣將更改為：%{value}。',
+        accessdenied = '拒絕使用 /weather 命令的訪問權限。',
+    },
+    dynamic_weather = {
+        disabled = '動態天氣變化已禁用。',
+        enabled = '動態天氣變化已啟用。',
+    },
+    time = {
+        frozenc = '時間已凍結。',
+        unfrozenc = '時間不再凍結。',
+        now_frozen = '時間已凍結。',
+        now_unfrozen = '時間不再凍結。',
+        morning = '時間設定為早晨。',
+        noon = '時間設定為中午。',
+        evening = '時間設定為傍晚。',
+        night = '時間設定為夜晚。',
+        change = '時間已更改為 %{value}:%{value2}。',
+        changec = '時間已更改為：%{value}！',
+        invalid = '無效的語法，正確語法為：time <小時> <分鐘> ！',
+        invalidc = '無效的語法。請使用 /time <小時> <分鐘> 代替！',
+        access = '拒絕使用 /time 命令的訪問權限。',
+    },
+    blackout = {
+        enabled = '現在已啟用停電模式。',
+        enabledc = '現在已啟用停電模式。',
+        disabled = '現在已禁用停電模式。',
+        disabledc = '現在已禁用停電模式。',
+    },
+    help = {
+        weathercommand = '更改天氣。',
+        weathertype = '天氣類型',
+        availableweather = '可用的類型：extrasunny、clear、neutral、smog、foggy、overcast、clouds、clearing、rain、thunder、snow、blizzard、snowlight、xmas 和 halloween',
+        timecommand = '更改時間。',
+        timehname = '小時',
+        timemname = '分鐘',
+        timeh = '介於 0 - 23 之間的數字',
+        timem = '介於 0 - 59 之間的數字',
+        freezecommand = '凍結/解凍時間。',
+        freezeweathercommand = '啟用/禁用動態天氣變化。',
+        morningcommand = '將時間設定為 09:00',
+        nooncommand = '將時間設定為 12:00',
+        eveningcommand = '將時間設定為 18:00',
+        nightcommand = '將時間設定為 23:00',
+        blackoutcommand = '切換停電模式。',
+    },
+}
+
+Lang = Lang or Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QB 賽車</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="ui">
+                <div class="editor">
+                    <span id="editor-racename">比賽：測試比賽</span>
+                    <span id="editor-checkpoints">Checkpoints: 1 / ?</span>
+                    <span id="editor-keys-add"><span style="color: rgb(0, 201, 0);">7</span> - 新增檢查點</span>
+                    <span id="editor-keys-tiredistance"></span>
+                    <span id="editor-keys-delete"></span>
+                    <span id="editor-keys-cancel"><span style="color: rgb(255, 43, 43);">9</span> - 取消編輯</span>
+                    <span id="editor-keys-save"><span style="color: rgb(0, 201, 0);">K</span> - 儲存比賽</span>
+                </div>
+
+                <div class="race">
+                    <span id="race-racename">比賽：測試比賽</span>
+                    <span id="race-checkpoints">檢查點: 1 / 1</span>
+                    <span id="race-lap">區數: 1 / 1</span>
+                    <span id="race-time">現在圈數: </span>
+                    <span id="race-besttime">最佳圈數: </span>
+                    <span id="race-totaltime">總時間: </span>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
