@@ -124,6 +124,7 @@ Config.Consumables = {
         ['yakult']  =  math.random(20, 30),
         ['brkmilk']  =  math.random(20, 30),
         ['pearlmilk']  =  math.random(30, 40),
+        ['bananamilk']  =  math.random(30, 40),
         ['watermelon_juice']  = math.random(20, 30),
         ['strawberry_milk']  = math.random(20, 30),
         ['banana_milk']  = math.random(20, 30),
