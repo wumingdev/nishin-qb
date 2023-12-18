@@ -980,7 +980,7 @@ local function getOutfits(gradeLevel, data)
         openMenu({
             {menu = "roomOutfits", label = Lang:t("outfits.roomOutfits"), selected = true, outfits = data[gender][gradeLevel]},
             {menu = "myOutfits", label = Lang:t("outfits.myOutfits"), selected = false, outfits = result},
-            {menu = "character", label = Lang:t("outfits.character"), selected = false},
+            -- {menu = "character", label = Lang:t("outfits.character"), selected = false},
             {menu = "accessoires", label = Lang:t("outfits.accessoires"), selected = false}
         })
     end)
