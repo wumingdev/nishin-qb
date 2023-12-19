@@ -10,12 +10,12 @@ Config.SkipSelection = false -- Skip the spawn selection and spawns the player a
 
 Config.DefaultNumberOfCharacters = 2 -- Define maximum amount of default characters (maximum 5 characters defined by default)
 Config.PlayersNumberOfCharacters = { -- Define maximum amount of player characters by rockstar license (you can find this license in your server's database in the player table)
-    { license = "license:6dd6edd686f9578e4ed5991a62781e98d0dd6baf", numberOfChars = 5 },  --lemongg
-    { license = "license:830d2247564ad0bb8214108befd5bed7c87ae0ff", numberOfChars = 5 },  --yidao
+    { license = "license:6dd6edd686f9578e4ed5991a62781e98d0dd6baf", numberOfChars = 15 },  --lemongg
+    { license = "license:830d2247564ad0bb8214108befd5bed7c87ae0ff", numberOfChars = 15 },  --yidao
     { license = "license:8d0763c3c77e8bc78de0986bedd706c292f0a909", numberOfChars = 5 },  --dark
     { license = "license:5bf88a0960b6055cb04e985d3f0c66120d886a55", numberOfChars = 5 },  --dark
-    { license = "license:a38f143001cd333b4314e738b4173ec344d2580d", numberOfChars = 5 },  --dohu
-    { license = "license:0adfdb810c031d73896fa996f4a65979024f3703", numberOfChars = 5 },   --阿石
-    { license = "license:6b70a556d976d310603f672aa23473a0b79554e9", numberOfChars = 5 },   --阿甲
-    { license = "license:59841098b7f33a5358a3ce2cca2ef96866b9e9c2", numberOfChars = 5 }   --tddd
+    { license = "license:a38f143001cd333b4314e738b4173ec344d2580d", numberOfChars = 15 },  --dohu
+    { license = "license:0adfdb810c031d73896fa996f4a65979024f3703", numberOfChars = 15 },   --阿石
+    { license = "license:6b70a556d976d310603f672aa23473a0b79554e9", numberOfChars = 15 },   --阿甲
+    { license = "license:59841098b7f33a5358a3ce2cca2ef96866b9e9c2", numberOfChars = 15 }   --tddd
 }

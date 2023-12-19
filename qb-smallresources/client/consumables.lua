@@ -163,6 +163,25 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
     end)
 end)
 
+RegisterNetEvent('consumables:client:EatPlayers', function(itemName)
+    QBCore.Functions.Progressbar("eat_something", Lang:t('consumables.eat_progress'), 5000, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = true
+    }, {
+        animDict = 'mp_player_inteat@burger',
+        anim = 'mp_player_int_eat_burger',
+        flags = 49
+    }, {}, {}, function() -- Done
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerServerEvent("consumables:server:addHunger", QBCore.Functions.GetPlayerData().metadata.hunger + Config.Consumables.eatplayers[itemName])
+        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
+    end, function() -- Cancel
+        QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")
+    end)
+end)
+
 RegisterNetEvent('consumables:client:Drink', function(itemName)
     QBCore.Functions.Progressbar("drink_something", Lang:t('consumables.drink_progress'), 5000, false, true, {
         disableMovement = false,
@@ -176,6 +195,24 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
     }, {}, {}, function() -- Done
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerServerEvent("consumables:server:addThirst", QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drink[itemName])
+    end, function() -- Cancel
+        QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")
+    end)
+end)
+
+RegisterNetEvent('consumables:client:DrinkPlayers', function(itemName)
+    QBCore.Functions.Progressbar("drink_something", Lang:t('consumables.drink_progress'), 5000, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = true
+    }, {
+        animDict = 'mp_player_intdrink',
+        anim = 'loop_bottle',
+        flags = 49
+    }, {}, {}, function() -- Done
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
+        TriggerServerEvent("consumables:server:addThirst", QBCore.Functions.GetPlayerData().metadata.thirst + Config.Consumables.drinkplayers[itemName])
     end, function() -- Cancel
         QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")
     end)
@@ -207,6 +244,7 @@ RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
         QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")
     end)
 end)
+
 
 RegisterNetEvent('consumables:client:Custom', function(itemName)
     QBCore.Functions.TriggerCallback('consumables:itemdata', function(data)

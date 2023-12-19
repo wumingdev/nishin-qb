@@ -17,12 +17,31 @@ for k, _ in pairs(Config.Consumables.eat) do
     end)
 end
 
+----------- / EatPlayer
+
+for k, _ in pairs(Config.Consumables.eatplayers) do
+    QBCore.Functions.CreateUseableItem(k, function(source, item)
+        local Player = QBCore.Functions.GetPlayer(source)
+        if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        TriggerClientEvent("consumables:client:EatPlayers", source, item.name)
+    end)
+end
+
 ----------- / Drink
 for k, _ in pairs(Config.Consumables.drink) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
         TriggerClientEvent("consumables:client:Drink", source, item.name)
+    end)
+end
+
+----------- / DrinkPlayers
+for k, _ in pairs(Config.Consumables.drinkplayers) do
+    QBCore.Functions.CreateUseableItem(k, function(source, item)
+        local Player = QBCore.Functions.GetPlayer(source)
+        if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        TriggerClientEvent("consumables:client:DrinkPlayers", source, item.name)
     end)
 end
 

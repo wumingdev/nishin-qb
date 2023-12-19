@@ -97,7 +97,7 @@ Config.Products = {
         {name = 'jelly',         price = 10,   amount = 50,  info = {}, type = 'item'},
         {name = 'pearl',         price = 10,   amount = 50,  info = {}, type = 'item'}, 
         {name = 'rice',          price = 5,    amount = 50,  info = {}, type = 'item'},
-        {name = 'egg',           price = 5,    amount = 50,  info = {}, type = 'item'},
+        {name = 'egg',           price = 10,   amount = 50,  info = {}, type = 'item'},
     }, 
     ['seefood'] = { 
         {name = 'tuna',          price = 20,   amount = 50,  info = {}, type = 'item'},
