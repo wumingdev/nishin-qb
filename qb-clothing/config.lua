@@ -554,8 +554,11 @@ Config.OutfitChangers = {
     [16] = {shopType = 'outfit', coords = vector3(-1424.9690, -457.1227, 35.9097), width = 3, length = 3},
     [17] = {shopType = 'outfit', coords = vector3(-194.1318, -1337.3611, 31.3005), width = 3, length = 3},
     [18] = {shopType = 'outfit', coords = vector3(840.1894, -825.5272, 26.3326), width = 3, length = 3},
-    
-}
+    [19] = {shopType = 'outfit', coords = vector3(812.8693, -761.2987, 31.2659), width = 3, length = 3},
+    [20] = {shopType = 'outfit', coords = vector3(-1060.0433, -1435.4471, -1.4203), width = 3, length = 3},
+    [21] = {shopType = 'outfit', coords = vector3(-587.5029, -1050.3582, 22.3442), width = 2, length = 2},
+
+}       
 
 -- set isGang to true if the requiredJob is a gang
 Config.ClothingRooms = {

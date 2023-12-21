@@ -526,6 +526,10 @@ RegisterNetEvent('consumables:client:ResetArmor', function()
     end
 end)
 
+RegisterNetEvent("consumables:client:vomit", function()
+    ExecuteCommand('e puke')
+end)
+
 -- RegisterNetEvent('consumables:client:UseRedSmoke', function()
 --     if parachuteEquipped then
 --         local ped = PlayerPedId()

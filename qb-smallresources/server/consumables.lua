@@ -1,4 +1,20 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+
+local getUnixTime = function()
+    return exports['qb-inventory']:getUTCDate()
+end
+
+local doesItemExpire = function(item)
+    if item.info ~= nil and item.info.expireDate ~= nil then
+        local time = getUnixTime()
+        if item.info.expireDate < time then
+            return true
+        end
+    end
+    return false
+end
+
+
 ----------- / alcohol
 
 for k, _ in pairs(Config.Consumables.alcohol) do
@@ -13,6 +29,10 @@ for k, _ in pairs(Config.Consumables.eat) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        if doesItemExpire(item) then
+            TriggerClientEvent("consumables:client:vomit", source)
+            return
+        end
         TriggerClientEvent("consumables:client:Eat", source, item.name)
     end)
 end
@@ -23,6 +43,11 @@ for k, _ in pairs(Config.Consumables.eatplayers) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        print(json.encode(item))
+        if doesItemExpire(item) then
+            TriggerClientEvent("consumables:client:vomit", source)
+            return
+        end
         TriggerClientEvent("consumables:client:EatPlayers", source, item.name)
     end)
 end
@@ -32,6 +57,11 @@ for k, _ in pairs(Config.Consumables.drink) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        print(json.encode(item))
+        if doesItemExpire(item) then
+            TriggerClientEvent("consumables:client:vomit", source)
+            return
+        end
         TriggerClientEvent("consumables:client:Drink", source, item.name)
     end)
 end
@@ -41,6 +71,11 @@ for k, _ in pairs(Config.Consumables.drinkplayers) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+        print(json.encode(item))
+        if doesItemExpire(item) then
+            TriggerClientEvent("consumables:client:vomit", source)
+            return
+        end
         TriggerClientEvent("consumables:client:DrinkPlayers", source, item.name)
     end)
 end
