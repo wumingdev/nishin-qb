@@ -152,18 +152,23 @@ Config.Consumables = {
         ['coffee'] = math.random(5, 10),
     },
     drinkplayers = {
-        ['brkmilk']  =  math.random(30, 40),
-        ['pearlmilk']  =  math.random(30, 40),
+        ['brkmilk']  =  math.random(10, 20),
+        ['pearlmilk']  =  math.random(10, 20),
+
+        -- 日料
         ['watermelon_juice']  = math.random(30, 40),
         ['strawberry_milk']  = math.random(30, 40),
         ['banana_milk']  = math.random(30, 40),
         ['orange_juice']  = math.random(30, 40),
+
+        -- 貓咪咖啡廳
         ['bubble_tea']  = math.random(30, 40),
         ['go_hospital']  = math.random(30, 40),
         ['dream_poppy']  = math.random(30, 40),
         ['cat_puding']  = math.random(30, 40),
         ['cat_happy']  = math.random(30, 40),
         ['cat_coffee']  = math.random(30, 40),
+        -- 習吧餐廳
         ['long_tea'] =  math.random(30, 40),
         ['margabata'] =  math.random(30, 40),
         ['mahonet'] =  math.random(30, 40),
@@ -173,7 +178,8 @@ Config.Consumables = {
         ['pandan_cake'] =  math.random(30, 40),
         ['mango_pomelo'] =  math.random(30, 40),
         ['lemon_tea'] =  math.random(30, 40),
-        [' '] =  math.random(30, 40),
+        ['emo_wang'] =  math.random(30, 40),
+        ["coconut_latte"] =  math.random(30, 40),
         ['mung_milk'] =  math.random(30, 40),
         ['black_tea'] =  math.random(30, 40),
         ['fig_tea'] =  math.random(30, 40),
