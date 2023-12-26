@@ -202,11 +202,11 @@ RegisterNetEvent('police:client:SendPoliceEmergencyAlert', function() --2023/12/
     -- exports['ps-dispatch']:OfficerDown()
     if(PlayerJob == "police") then 
         TriggerServerEvent('police:server:policeAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
-        TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+        -- TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
     end
     if(PlayerJob == "ambulance") then 
-        TriggerServerEvent('police:server:policeAlert', '醫護倒地')
-        TriggerServerEvent('hospital:server:ambulanceAlert', '醫護倒地')
+        TriggerServerEvent('police:server:policeAlert', '醫護需要支援')
+        TriggerServerEvent('hospital:server:ambulanceAlert', '醫護需要支援')
     end
     
 end)

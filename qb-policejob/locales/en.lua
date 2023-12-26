@@ -259,7 +259,7 @@ local Translations = {
         target_location = '您標記了 %{firstname} %{lastname} 的位置在您的地圖上',
         anklet_location = '腳鐐位置',
         new_call = '新呼叫',
-        officer_down = '警察 %{lastname} | %{callsign} 倒下了',
+        officer_down = '警察 %{lastname} | %{callsign} 需要支援',
         fine_issued = '已成功對違規者發出罰款',
         received_fine = '州債務回收自動收回了欠款的罰款...'
     },    

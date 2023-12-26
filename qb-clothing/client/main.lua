@@ -30,7 +30,7 @@ local skinData = {
     ["shoes"] =                {item = 0,    texture = 0,  defaultItem = 1,      defaultTexture = 0},
     ["mask"] =                 {item = 0,    texture = 0,  defaultItem = 0,      defaultTexture = 0},
     ["hat"] =                  {item = -1,   texture = 0,  defaultItem = -1,     defaultTexture = 0},
-    ["glass"] =                {item = 0,    texture = 0,  defaultItem = 0,      defaultTexture = 0},
+    ["glass"] =                {item = 5,    texture = 0,  defaultItem = 5,      defaultTexture = 0},
     ["ear"] =                  {item = -1,   texture = 0,  defaultItem = -1,     defaultTexture = 0},
     ["watch"] =                {item = -1,   texture = 0,  defaultItem = -1,     defaultTexture = 0},
     ["bracelet"] =             {item = -1,   texture = 0,  defaultItem = -1,     defaultTexture = 0},
@@ -279,7 +279,7 @@ local function resetClothing(data)
 
     -- Hair
     SetPedComponentVariation(ped, 2, data["hair"].item, 0, 0)
-    SetPedHairColor(ped, data["hair"].texture, data["hair"].texture)
+    SetPedHairColor(ped, data["hair"].item, data["hair"].texture)
 
     -- Eyebrows
     SetPedHeadOverlay(ped, 2, data["eyebrows"].item, 1.0)
@@ -1207,7 +1207,9 @@ RegisterNetEvent('qb-clothing:client:loadOutfit', function(oData)
 
     local data = oData.outfitData
 
-    if typeof(data) ~= "table" then data = json.decode(data) end
+    if typeof(data) ~= "table" then 
+        data = json.decode(data) 
+    end
 
     for k in pairs(data) do
         skinData[k].item = data[k].item
@@ -1316,7 +1318,7 @@ RegisterNetEvent('qb-clothing:client:loadOutfit', function(oData)
     end
 
     if oData.outfitName ~= nil then
-        QBCore.Functions.Notify("You have chosen "..oData.outfitName.."! Press Confirm to confirm outfit.")
+        QBCore.Functions.Notify("你已經選擇 "..oData.outfitName.."! 請按確認，即可變更服裝")
     end
 end)
 RegisterNetEvent("qb-clothing:client:adjustfacewear", function(type)
@@ -1447,6 +1449,7 @@ RegisterNetEvent('QBCore:Client:OnGangUpdate', function(GangInfo)
     PlayerData.gang = GangInfo
 end)
 RegisterNetEvent('qb-clothing:client:openOutfitMenu', function()
+    SaveSkin()
     QBCore.Functions.TriggerCallback('qb-clothing:server:getOutfits', function(result)
         openMenu({
             {menu = "myOutfits", label = Lang:t("outfits.myOutfits"), selected = true, outfits = result},

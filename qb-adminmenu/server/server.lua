@@ -526,18 +526,16 @@ end, 'admin')
 
 function getPlayerData()
     local tempPlayers = {}
-    for _, v in pairs(QBCore.Functions.GetPlayers()) do
-        local targetped = GetPlayerPed(v)
-        local ped = QBCore.Functions.GetPlayer(v)
+    for k, ped in pairs(QBCore.Functions.GetQBPlayers()) do
+        local targetped = GetPlayerPed(k)
         tempPlayers[#tempPlayers + 1] = {
-            name = (ped.PlayerData.charinfo.firstname or '') .. ' ' .. (ped.PlayerData.charinfo.lastname or '') .. ' | (' .. (GetPlayerName(v) or '') .. ')',
-            id = v,
+            name = (ped.PlayerData.charinfo.firstname or '') .. ' ' .. (ped.PlayerData.charinfo.lastname or '') .. ' | (' .. (GetPlayerName(k) or '') .. ')', -- 使用正确的索引
+            id = k,
             coords = GetEntityCoords(targetped),
             cid = ped.PlayerData.charinfo.firstname .. ' ' .. ped.PlayerData.charinfo.lastname,
             citizenid = ped.PlayerData.citizenid,
             sources = GetPlayerPed(ped.PlayerData.source),
             sourceplayer = ped.PlayerData.source
-
         }
     end
     -- Sort players list by source ID (1,2,3,4,5, etc) --
@@ -546,6 +544,7 @@ function getPlayerData()
     end)
     return tempPlayers
 end
+
 
 -- CreateThread(function()
 --     while true do

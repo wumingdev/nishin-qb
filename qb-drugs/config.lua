@@ -104,7 +104,7 @@ Config = {
     SuccessChance = 80,
     ScamChance = 25,
     RobberyChance = 10,
-    MinimumDrugSalePolice = 10,
+    MinimumDrugSalePolice = 5,
 
     DrugsPrice = {
         ["weed_white-widow"] = {
@@ -191,5 +191,5 @@ Config = {
     -- Want to give out a cryptostick per stop?
     GiveCryptoStick = false,
     -- Has to roll this number or higher to receive a cryptostick
-    CryptoStickChance = 98,
+    CryptoStickChance = 95,
 }

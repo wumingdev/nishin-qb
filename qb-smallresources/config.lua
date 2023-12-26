@@ -107,6 +107,7 @@ Config.Consumables = {
         ['kimchi'] =  math.random(2, 5),
     },
     eatplayers = {
+        ['grilled_chicken'] = math.random(10, 20),
         ['yogurt'] = math.random(20, 30),
         ['yakult']  =  math.random(20, 30),
         ['donut_straberry'] = math.random(20, 30),
@@ -143,6 +144,15 @@ Config.Consumables = {
         ['croissant_egg'] = math.random(40, 50),
         ['hotteok'] = math.random(40, 50),
         ['heibai'] = math.random(40, 50),
+        ['crispy_oily'] = math.random(20, 30),
+        ['crab_hamburger'] = math.random(40, 50),
+        ['sea_leg'] = math.random(20, 30),
+        ['m_hamburger'] = math.random(40, 50),
+        ['franchfries'] = math.random(30, 40),
+        ['salad'] = math.random(10, 20),
+        ['wings'] = math.random(30, 40),
+        ['pandan_cake'] =  math.random(30, 40),
+
     },
     drink = { -- default drink items
         ['water_bottle'] = math.random(10, 20),
@@ -150,6 +160,11 @@ Config.Consumables = {
         ['milk'] = math.random(5, 10),
         ['coconut_milk'] = math.random(5, 10),
         ['coffee'] = math.random(5, 10),
+        ['seaweed_juice'] = math.random(10, 20),
+        ['sprite'] = math.random(30, 40),
+        ['lemonred'] = math.random(30, 40),
+        
+
     },
     drinkplayers = {
         ['brkmilk']  =  math.random(10, 20),
@@ -175,7 +190,6 @@ Config.Consumables = {
         ['mojito'] =  math.random(30, 40),
         ['screwdriver'] =  math.random(30, 40),
         ['red_tangyuan'] =  math.random(30, 40),
-        ['pandan_cake'] =  math.random(30, 40),
         ['mango_pomelo'] =  math.random(30, 40),
         ['lemon_tea'] =  math.random(30, 40),
         ['emo_wang'] =  math.random(30, 40),

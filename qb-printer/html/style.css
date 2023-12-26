@@ -71,6 +71,9 @@ body {
     left: 0;
     right: 0;
     top: 40%;
+    color: #000;
+    text-shadow: 0 0 black;
+    font-weight: 900;
     transform: translateY(-50%);
     width: 40vh;
     height: 4.5vh;
